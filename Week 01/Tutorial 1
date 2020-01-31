@@ -1,0 +1,11 @@
+create table wk1student(
+StudentID char(8),
+StudentName varchar(80),
+StudentAddress varchar(80),
+StudentCourseCode varchar(7)
+);
+
+SELECT * from wk1student;
+
+insert into wk1student values ('c1234567','Omair','Kevin Street','DT211c');
+commit;
