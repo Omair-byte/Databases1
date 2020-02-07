@@ -1,1 +1,140 @@
--
+// QUIZ
+alter session set current_schema = pobyrne;
+select * from m_movies;
+select MTITLE, BOX_OFFICE "TAKINGS (MILLIONS$)" from m_movies ORDER by BOX_OFFICE;
+
+//LAB
+alter session set current_schema = oduadu;
+
+
+create table music(
+    Genre   char (20) PRIMARY KEY,
+    NameofPiece CHAR (20) 
+        NOT NULL,
+    Duration
+        number(20,2)
+        NOT NULL,
+    DateFirstPlayed
+        DATE
+        default sysdate,
+    DateAdded
+        Date,
+    Artist
+        VARCHAR(20),
+    Album
+        VARCHAR(20),
+    CostToDownload
+        number(10,2)
+);
+
+drop table music;
+drop table client;
+
+insert into music values(
+'POP',
+'Flowers',
+3.2,
+'10-feb-00',
+sysdate,
+'Sultan Alghamdi',
+'KSA',
+4.50
+);
+
+insert into music values(
+'Spiritual',
+'Al-Kahf',
+32.2,
+'10-feb-00',
+sysdate,
+'Hazz3a al balushi',
+'KSA',
+4.50
+);
+
+insert into music (
+    Genre,  
+    NameofPiece,
+    Duration,
+    DateAdded) 
+Values(
+    'Attadri Matta',
+    'Flowers',
+    3.2,
+    '10-feb-00'
+);
+
+insert into music 
+    (
+        Genre,  
+        NameofPiece,
+        Duration,
+        DateAdded
+    ) 
+Values
+    (
+        'Alm Alkhataya',
+        'Pain',
+        3.2,
+        '10-feb-12'
+    );
+select * from music;
+
+
+
+
+drop table cars;
+create table Cars
+(
+    Registration 
+        varchar(20),
+    Name
+        varchar(50),
+    email
+        varchar(50),
+    Model
+        Varchar(50),
+    Passenger
+        number(10),
+);       
+
+insert into cars values
+(
+    '07D11211',
+    'Ken Delvin',
+    'ken@dit,ie',
+    'Toyota lexus',
+    6
+);
+
+insert into cars
+(
+    name,
+    Model,
+    Registration
+)
+values
+(
+    'Ken',
+    'Volkswagen Golf',
+    '00D12831'
+);
+
+
+insert into cars
+(
+    name,
+    Model,
+    Registration
+)
+values
+(
+    'Ken',
+    'Audi 100',
+    '90D10800'
+);
+
+select * from cars;
+
+
+
